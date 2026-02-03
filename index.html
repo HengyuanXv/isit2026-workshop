@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>IEEE ISIT 2026 Workshop — Coding for New Applications</title>
+  <meta name="description" content="IEEE ISIT 2026 Workshop on Coding for New Applications (Guangzhou, China). Call for Papers, important dates, topics, and organizing committee." />
+
+  <!--
+    One-file, zero-dependency workshop website.
+    Host on GitHub Pages by saving this file as: index.html (repository root).
+  -->
+
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:rgba(255,255,255,.06);
+      --card2:rgba(255,255,255,.03);
+      --text:#eef2ff;
+      --muted:rgba(238,242,255,.72);
+      --line:rgba(255,255,255,.14);
+      --accent:#7aa7ff;
+      --accent2:#63e6be;
+      --shadow: 0 12px 34px rgba(0,0,0,.35);
+      --radius: 16px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ margin:0; padding:0; }
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(1200px 600px at 15% 0%, rgba(122,167,255,.28), transparent 58%),
+        radial-gradient(950px 540px at 92% 10%, rgba(99,230,190,.18), transparent 55%),
+        var(--bg);
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    .wrap{ max-width:var(--max); margin:0 auto; padding:0 18px; }
+
+    header{
+      position:sticky; top:0; z-index:10;
+      background: rgba(11,16,32,.72);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px) saturate(140%);
+    }
+
+    .nav{
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+      padding:12px 0;
+    }
+
+    .brand{ line-height:1.15; }
+    .brand .t{ font-weight:800; letter-spacing:.2px; font-size:14px; }
+    .brand .s{ color:var(--muted); font-size:12px; }
+
+    .links{ display:flex; flex-wrap:wrap; gap:8px; justify-content:flex-end; }
+    .links a{
+      color:var(--muted);
+      font-size:13px;
+      padding:8px 10px;
+      border:1px solid transparent;
+      border-radius:999px;
+      text-decoration:none;
+    }
+    .links a:hover{ color:var(--text); border-color:var(--line); text-decoration:none; }
+
+    .hero{ padding:42px 0 18px; }
+    .heroGrid{ display:grid; grid-template-columns: 1.35fr .65fr; gap:18px; }
+    @media (max-width: 920px){ .heroGrid{ grid-template-columns: 1fr; } }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, var(--card), var(--card2));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .pad{ padding:22px; }
+
+    h1{ margin:0 0 10px; font-size:28px; letter-spacing:.2px; }
+    h2{ margin:0 0 10px; font-size:18px; }
+    p{ margin:0; color:var(--muted); line-height:1.7; font-size:14px; }
+
+    .kicker{
+      display:inline-flex; gap:8px; align-items:center;
+      padding:7px 10px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color: var(--muted);
+      font-size:12px;
+      background: rgba(255,255,255,.03);
+      margin-bottom:10px;
+    }
+    .dot{ width:8px; height:8px; border-radius:50%; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+
+    .cta{ display:flex; flex-wrap:wrap; gap:10px; margin-top:16px; }
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:8px;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:700;
+      font-size:13px;
+      text-decoration:none;
+    }
+    .btn:hover{ text-decoration:none; transform: translateY(-1px); }
+    .btn.primary{
+      border:none;
+      color:#07101f;
+      background: linear-gradient(90deg, rgba(122,167,255,.95), rgba(99,230,190,.95));
+    }
+
+    .section{ padding:14px 0 26px; }
+    .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    @media (max-width: 920px){ .grid2{ grid-template-columns: 1fr; } }
+
+    ul{ margin:10px 0 0 18px; color:var(--muted); line-height:1.7; font-size:14px; }
+    li{ margin:4px 0; }
+
+    table{ width:100%; border-collapse:collapse; margin-top:10px; font-size:14px; }
+    td{ padding:10px 10px; border-top:1px solid var(--line); vertical-align:top; }
+    td:first-child{ width:54%; font-weight:700; color:var(--text); }
+
+    .twoCol{ display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:10px; }
+    @media (max-width: 760px){ .twoCol{ grid-template-columns:1fr; } }
+
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:8px 10px;
+      border:1px solid var(--line);
+      border-radius:12px;
+      background: rgba(255,255,255,.03);
+      font-size:13px;
+      font-weight:800;
+      color:var(--text);
+      margin:0 0 8px;
+    }
+
+    .mutedSmall{ font-size:12px; color: rgba(238,242,255,.6); margin-top:10px; }
+
+    footer{
+      border-top:1px solid var(--line);
+      padding:22px 0 40px;
+      color: rgba(238,242,255,.62);
+      font-size:13px;
+    }
+
+    .topline{
+      padding:18px 0;
+      background:
+        linear-gradient(90deg, rgba(122,167,255,.18), rgba(99,230,190,.12));
+      border-bottom:1px solid var(--line);
+    }
+
+    .topline .wrap{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; }
+    .topline strong{ font-size:13px; }
+
+    .pill{
+      display:inline-flex; gap:10px; align-items:center;
+      border:1px solid var(--line);
+      padding:8px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.03);
+      color: var(--muted);
+      font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="t">IEEE ISIT 2026 Workshop</div>
+          <div class="s">Workshop on Coding for New Applications · Guangzhou, China</div>
+        </div>
+
+        <nav class="links" aria-label="Primary">
+          <a href="#cfp">CFP</a>
+          <a href="#dates">Dates</a>
+          <a href="#scope">Scope</a>
+          <a href="#topics">Topics</a>
+          <a href="#committee">Committee</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <div class="topline">
+    <div class="wrap">
+      <div class="pill"><span class="dot"></span><strong>Workshop date:</strong> 3 July 2026</div>
+      <div class="pill"><strong>Submission:</strong> via EDAS (link to be announced)</div>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero" id="cfp">
+      <div class="wrap">
+        <div class="heroGrid">
+
+          <div class="card">
+            <div class="pad">
+              <div class="kicker"><span class="dot"></span>Call for Papers</div>
+              <h1>Workshop on Coding for New Applications</h1>
+              <p>
+                This workshop is part of IEEE ISIT 2026 in Guangzhou, China. We seek original completed and unpublished work
+                not currently under review by any other journal/magazine/conference.
+              </p>
+
+              <div class="cta">
+                <!-- Replace the links below if you move the CFP PDF to a different location. -->
+                <a class="btn primary" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1zMnMzJVtOVCFsur83D0K8jxVS-Zcfa8V/view?usp=sharing">View CFP (PDF)</a>
+                <a class="btn" target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&id=1zMnMzJVtOVCFsur83D0K8jxVS-Zcfa8V">Download CFP</a>
+                <a class="btn" href="#contact">Contact</a>
+              </div>
+
+              <div class="mutedSmall">If the PDF preview is blocked in some networks, use the download button.</div>
+            </div>
+          </div>
+
+          <div class="card" id="dates">
+            <div class="pad">
+              <h2>Important Dates</h2>
+              <table aria-label="Important dates">
+                <tr><td>Paper submission deadline</td><td>7 April 2026 (firm)</td></tr>
+                <tr><td>Notification of acceptance</td><td>21 April 2026</td></tr>
+                <tr><td>Final manuscripts due</td><td>28 April 2026</td></tr>
+                <tr><td>Workshop date</td><td>3 July 2026</td></tr>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="scope">
+      <div class="wrap">
+        <div class="grid2">
+          <div class="card">
+            <div class="pad">
+              <h2>Scope</h2>
+              <p>
+                Since Shannon’s seminal work, coding theory has been a central pillar of information theory and has powered generations of
+                communication systems. Looking ahead, information processing and communication is moving beyond the classical AWGN-centric paradigm
+                and is increasingly shaped by application-driven requirements. Emerging scenarios call for advances in coding theory and coded
+                modulation across:
+              </p>
+              <ul>
+                <li><b>Advanced waveforms</b> (e.g., OTFS, FTN, ODDM, AFDM) requiring waveform-aware code design and decoding</li>
+                <li><b>Integrated sensing and communication (ISAC)</b> calling for strategies that jointly ensure reliable data delivery and accurate sensing/localization</li>
+                <li><b>Coded computing</b> for distributed learning, large-scale processing, and storage with straggler resilience and low latency</li>
+                <li><b>Multi-user access</b> (e.g., NOMA, RSMA, massive random access) requiring new multi-user codes and joint detection/decoding</li>
+                <li><b>AI-native systems</b> demanding information-theoretic and coding tools for compression, efficient/robust training, and interpretability</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card" id="topics">
+            <div class="pad">
+              <h2>Topics of Interest</h2>
+              <p>Topics include, but are not limited to:</p>
+              <ul>
+                <li>Information-theoretic limits and performance analysis in emerging application environments</li>
+                <li>Coding theory for new application domains</li>
+                <li>Code constructions and decoding algorithms tailored to new waveform designs, and joint optimization of waveform and coding strategies</li>
+                <li>Coding for integrated communication, sensing, and localization, including trade-off analysis and unified design frameworks</li>
+                <li>Coded computing for distributed learning, data storage, and large-scale computation</li>
+                <li>Coding for multi-user access scenarios (e.g., NOMA, RSMA, massive random access) and adaptation of single-user codes to multi-user detection and joint decoding frameworks</li>
+                <li>Low-complexity decoding for practical implementation under latency, memory, and power constraints</li>
+                <li>Near-ML decoding for diverse short codes under application-driven constraints</li>
+                <li>Coding for energy-efficient, secure, and privacy-preserving communications</li>
+                <li>Compression and error-correcting codes for machine learning (data/representation compression; robust training/aggregation)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="committee">
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>Organizing Committee</h2>
+
+            <div class="twoCol">
+              <div>
+                <div class="tag">Workshop Co-Chairs</div>
+                <ul>
+                  <li>Xiao Ma (Sun Yat-sen University, China)</li>
+                  <li>Richard D. Wesel (University of California, Los Angeles, United States)</li>
+                  <li>Linqi Song (City University of Hong Kong, Hong Kong SAR, China)</li>
+                </ul>
+              </div>
+
+              <div>
+                <div class="tag">TPC Co-Chairs</div>
+                <ul>
+                  <li>Qianfan Wang (City University of Hong Kong, Hong Kong SAR, China)</li>
+                  <li>Huazi Zhang (Huawei Technologies Co., Ltd., China)</li>
+                  <li>Shuangyang Li (Technical University of Berlin, Germany)</li>
+                  <li>Peihong Yuan (Fudan University, China)</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="margin-top:14px;">
+              <div class="tag">Steering Committee</div>
+              <ul>
+                <li>Giuseppe Caire (Technical University of Berlin, Germany)</li>
+                <li>Baoming Bai (Xidian University, China)</li>
+                <li>Jinhong Yuan (The University of New South Wales, Australia)</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>Contact</h2>
+            <p>
+              For questions, please email: <a href="mailto:qwang742@cityu.edu.hk"><b>qwang742@cityu.edu.hk</b></a>
+            </p>
+            <div class="mutedSmall">
+              Submission is via EDAS; the submission link will be posted here once available.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>© IEEE ISIT 2026 Workshop on Coding for New Applications</div>
+      <div class="mutedSmall">Last updated: 2026-02-03</div>
+    </div>
+  </footer>
+</body>
+</html>
