@@ -6,22 +6,17 @@
   <title>IEEE ISIT 2026 Workshop — Coding for New Applications</title>
   <meta name="description" content="IEEE ISIT 2026 Workshop on Coding for New Applications (Guangzhou, China). Call for Papers, important dates, topics, and organizing committee." />
 
-  <!--
-    One-file, zero-dependency workshop website.
-    Host on GitHub Pages by saving this file as: index.html (repository root).
-  -->
-
   <style>
     :root{
-      --bg:#0b1020;
-      --card:rgba(255,255,255,.06);
-      --card2:rgba(255,255,255,.03);
-      --text:#eef2ff;
-      --muted:rgba(238,242,255,.72);
-      --line:rgba(255,255,255,.14);
-      --accent:#7aa7ff;
-      --accent2:#63e6be;
-      --shadow: 0 12px 34px rgba(0,0,0,.35);
+      --bg:#ffffff;
+      --card:#ffffff;
+      --card2:#f8fafc;
+      --text:#0b1020;
+      --muted:rgba(11,16,32,.70);
+      --line:rgba(15,23,42,.14);
+      --accent:#2563eb;
+      --accent2:#10b981;
+      --shadow: 0 10px 24px rgba(2,6,23,.08);
       --radius: 16px;
       --max: 1100px;
     }
@@ -32,8 +27,8 @@
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
       color: var(--text);
       background:
-        radial-gradient(1200px 600px at 15% 0%, rgba(122,167,255,.28), transparent 58%),
-        radial-gradient(950px 540px at 92% 10%, rgba(99,230,190,.18), transparent 55%),
+        radial-gradient(1200px 600px at 12% 0%, rgba(37,99,235,.10), transparent 58%),
+        radial-gradient(950px 540px at 92% 10%, rgba(16,185,129,.08), transparent 55%),
         var(--bg);
     }
 
@@ -44,7 +39,7 @@
 
     header{
       position:sticky; top:0; z-index:10;
-      background: rgba(11,16,32,.72);
+      background: rgba(255,255,255,.82);
       border-bottom: 1px solid var(--line);
       backdrop-filter: blur(10px) saturate(140%);
     }
@@ -93,7 +88,7 @@
       border-radius:999px;
       color: var(--muted);
       font-size:12px;
-      background: rgba(255,255,255,.03);
+      background: rgba(2,6,23,.03);
       margin-bottom:10px;
     }
     .dot{ width:8px; height:8px; border-radius:50%; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
@@ -104,16 +99,18 @@
       padding:10px 14px;
       border-radius:12px;
       border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
+      background: #ffffff;
       font-weight:700;
       font-size:13px;
       text-decoration:none;
+      box-shadow: 0 6px 16px rgba(2,6,23,.06);
     }
     .btn:hover{ text-decoration:none; transform: translateY(-1px); }
     .btn.primary{
       border:none;
-      color:#07101f;
-      background: linear-gradient(90deg, rgba(122,167,255,.95), rgba(99,230,190,.95));
+      color:#ffffff;
+      background: linear-gradient(90deg, rgba(37,99,235,.95), rgba(16,185,129,.95));
+      box-shadow: 0 10px 22px rgba(2,6,23,.12);
     }
 
     .section{ padding:14px 0 26px; }
@@ -135,41 +132,45 @@
       padding:8px 10px;
       border:1px solid var(--line);
       border-radius:12px;
-      background: rgba(255,255,255,.03);
+      background: rgba(2,6,23,.03);
       font-size:13px;
       font-weight:800;
       color:var(--text);
       margin:0 0 8px;
     }
 
-    .mutedSmall{ font-size:12px; color: rgba(238,242,255,.6); margin-top:10px; }
+    .mutedSmall{ font-size:12px; color: rgba(11,16,32,.55); margin-top:10px; }
 
     footer{
       border-top:1px solid var(--line);
       padding:22px 0 40px;
-      color: rgba(238,242,255,.62);
+      color: rgba(11,16,32,.60);
       font-size:13px;
     }
 
     .topline{
-      padding:18px 0;
-      background:
-        linear-gradient(90deg, rgba(122,167,255,.18), rgba(99,230,190,.12));
+      padding:16px 0;
+      background: linear-gradient(90deg, rgba(37,99,235,.06), rgba(16,185,129,.05));
       border-bottom:1px solid var(--line);
     }
-
     .topline .wrap{ display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:space-between; }
-    .topline strong{ font-size:13px; }
-
     .pill{
       display:inline-flex; gap:10px; align-items:center;
       border:1px solid var(--line);
       padding:8px 10px;
       border-radius:999px;
-      background: rgba(255,255,255,.03);
+      background: rgba(2,6,23,.03);
       color: var(--muted);
       font-size:12px;
     }
+    .topline strong{ font-size:12px; color:var(--text); }
+
+    /* 只把 Organizing Committee 里的名单加粗 */
+    .committee li{ font-weight:800; color: var(--text); }
+    .committee li{ color: var(--text); }
+    .committee ul{ color: var(--text); }
+    .committee li span.muted{ font-weight:800; }
+
   </style>
 </head>
 
@@ -216,7 +217,6 @@
               </p>
 
               <div class="cta">
-                <!-- Replace the links below if you move the CFP PDF to a different location. -->
                 <a class="btn primary" target="_blank" rel="noopener" href="https://drive.google.com/file/d/1zMnMzJVtOVCFsur83D0K8jxVS-Zcfa8V/view?usp=sharing">View CFP (PDF)</a>
                 <a class="btn" target="_blank" rel="noopener" href="https://drive.google.com/uc?export=download&id=1zMnMzJVtOVCFsur83D0K8jxVS-Zcfa8V">Download CFP</a>
                 <a class="btn" href="#contact">Contact</a>
@@ -286,7 +286,7 @@
       </div>
     </section>
 
-    <section class="section" id="committee">
+    <section class="section committee" id="committee">
       <div class="wrap">
         <div class="card">
           <div class="pad">
@@ -347,7 +347,7 @@
   <footer>
     <div class="wrap">
       <div>© IEEE ISIT 2026 Workshop on Coding for New Applications</div>
-      <div class="mutedSmall">Last updated: 2026-02-02</div>
+      <div class="mutedSmall">Last updated: 2026-02-03</div>
     </div>
   </footer>
 </body>
