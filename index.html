@@ -170,7 +170,31 @@
     .committee li{ color: var(--text); }
     .committee ul{ color: var(--text); }
     .committee li span.muted{ font-weight:800; }
-
+    .program table td:first-child{
+      width:150px;
+      white-space:nowrap;
+      font-weight:800;
+      color:var(--text);
+    }
+    .program .session-title{
+      font-weight:800;
+      color:var(--text);
+      margin:0 0 6px;
+    }
+    .program .talk-title{
+      font-style:italic;
+      color:var(--text);
+    }
+    .program ol{
+      margin:8px 0 0 20px;
+      color:var(--muted);
+      line-height:1.7;
+      font-size:14px;
+    }
+    .program .break td{
+      color:var(--muted);
+      font-weight:700;
+    }
   </style>
 </head>
 
@@ -190,6 +214,7 @@
   <a href="#topics">Topics</a>
   <a href="#talks">Talks</a>
   <a href="#committee">Committee</a>
+  <a href="#program">Program</a>
   <a href="#contact">Contact</a>
 </nav>
       </div>
@@ -367,7 +392,95 @@
         </div>
       </div>
     </section>
+    <section class="section program" id="program">
+      <div class="wrap">
+        <div class="card">
+          <div class="pad">
+            <h2>Workshop Program</h2>
+            <p>Room: TBD</p>
 
+            <table aria-label="Workshop program">
+              <tr>
+                <td>09:50 – 11:10</td>
+                <td>
+                  <div class="session-title">Invited Talk</div>
+                  Baoming Bai (Xidian University, China)<br>
+                  <span class="talk-title">Design of GC-LDPC Codes for Integrated Satellite-and-Terrestrial Networks</span>
+
+                  <div class="session-title" style="margin-top:14px;">Technical Session 1</div>
+                  <ol>
+                    <li>Improved TEMS Decoding of NB-LDPC Codes</li>
+                    <li>Polar-Coded Cooperation for Free Space Optical Satellite Networks</li>
+                    <li>Efficient Diffusion-Based DeepJSCC Under Resource-Constrained Space Optical Channels</li>
+                    <li>Concatenated Code Design for Ethernet Networks with 400 Gb/s per Lane Signaling</li>
+                  </ol>
+                </td>
+              </tr>
+
+              <tr class="break">
+                <td>11:10 – 11:30</td>
+                <td>Tea Break</td>
+              </tr>
+
+              <tr>
+                <td>11:30 – 12:50</td>
+                <td>
+                  <div class="session-title">Technical Session 2</div>
+                  <ol>
+                    <li>Channel Code Design for Multi-User in Unsourced Multiple Access</li>
+                    <li>Joint Power and Bit Allocation for Precoded Massive MIMO Channels</li>
+                    <li>Analog Error Correcting Codes with Constant Redundancy</li>
+                    <li>An Enhanced Error Correction Code Transformer Based on Temporal Convolutional Network</li>
+                  </ol>
+                </td>
+              </tr>
+
+              <tr class="break">
+                <td>12:50 – 14:00</td>
+                <td>Lunch Break</td>
+              </tr>
+
+              <tr>
+                <td>14:00 – 15:20</td>
+                <td>
+                  <div class="session-title">Invited Talk</div>
+                  Peter Trifonov (ITMO University, Russia)<br>
+                  <span class="talk-title">Low Complexity Decoding of Polar Codes with Large Kernels</span>
+
+                  <div class="session-title" style="margin-top:14px;">Technical Session 3</div>
+                  <ol>
+                    <li>Area-Efficient ORBGRAND Decoders for PAM Systems</li>
+                    <li>Universal Maximum Likelihood (List) Decoding via Fast Vector-Matrix Multiplication</li>
+                    <li>Error-Building Decoding of Linear Block Codes</li>
+                    <li>Recursive Decoding of Block Codes for Partial Response Channels and Colored Noise</li>
+                  </ol>
+                </td>
+              </tr>
+
+              <tr class="break">
+                <td>15:20 – 15:40</td>
+                <td>Tea Break</td>
+              </tr>
+
+              <tr>
+                <td>15:40 – 18:00</td>
+                <td>
+                  <div class="session-title">Technical Session 4</div>
+                  <ol>
+                    <li>Fundamental Limits of Secure and Robust Aggregation</li>
+                    <li>Privacy-Preserving Computation Scheme over Gaussian Multiple-Access Channel with Feedback</li>
+                    <li>Expansion-Preserving Gradient Code</li>
+                    <li>Distributed Lagrange Coded Computing with Bounded Privacy Leakage</li>
+                    <li>A Rate-Adaptive Disk-Sharing Architecture for LDPC/RAID Systems</li>
+                  </ol>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+      </div>
+    </section>
     <section class="section" id="contact">
       <div class="wrap">
         <div class="card">
